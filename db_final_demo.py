@@ -4,20 +4,31 @@ import os
 from dotenv import load_dotenv
 
 ###################################################################################################################
+load_dotenv()
 
 
 def create_connection():
+    password = os.getenv("DB_PASSWORD")
+
+    if not password:
+        raise RuntimeError(
+            "DB_PASSWORD is missing. Add it to your local .env file."
+        )
+
     try:
         connection = mysql.connector.connect(
-            host='127.0.0.1',
-            user='root',
-            password= acc_password,
-            database='homedepot'
+            host=os.getenv("DB_HOST", "127.0.0.1"),
+            user=os.getenv("DB_USER", "root"),
+            password=password,
+            database=os.getenv("DB_NAME", "homedepot"),
         )
         return connection
-    except Error as e:
-        print(f"Error: {e}")
+
+    except Error as error:
+        print(f"Database connection error: {error}")
         return None
+    
+
 
 #excuting SQL queries
 def execute_query(connection, query, values=None):
