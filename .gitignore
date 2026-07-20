@@ -1,2 +1,13 @@
-
+# Environment variables and secrets
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# macOS and editor files
+.DS_Store
+.vscode/
+.idea/
