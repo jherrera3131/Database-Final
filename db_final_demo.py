@@ -9,7 +9,7 @@ def create_connection():
         connection = mysql.connector.connect(
             host='127.0.0.1',
             user='root',
-            password='***REMOVED***',
+            password= acc_password,
             database='homedepot'
         )
         return connection
