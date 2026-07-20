@@ -1,5 +1,5 @@
 # COM303-Final
-This is the README for Jairon and I's database systems final project.
+This is the README for Miles and I's database systems final project.
 
 Usage Instructions:
 To access the database you have to change the root user and password information for the database connector. You also have to download the database from the compressed zip file. 
