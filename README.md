@@ -1,8 +1,26 @@
 # COM303-Final
-This is the README for Miles and I's database systems final project.
+This repository contains the database systems final project completed by Miles and me.
 
-Usage Instructions:
-To access the database you have to change the root user and password information for the database connector. You also have to download the database from the compressed zip file. 
+Usage Instructions
 
-Interface Usage:
-The interface home page contains options for the Customer user, the Database manager and the store manager. There are numbers associated with each. If you enter the number associated with a specific user, you can access the functions that each user has at their disposal. 
+Import the database files from the Dump20250509 folder into MySQL.
+
+Copy .env.example to a new file named .env, then enter your local MySQL connection information:
+
+DB_HOST=127.0.0.1
+DB_USER=root
+DB_PASSWORD=your_mysql_password
+DB_NAME=homedepot
+
+Install the required packages:
+
+python -m pip install mysql-connector-python python-dotenv
+
+Run the interface with:
+
+python db_final_demo.py
+Interface Usage
+
+The main menu contains options for the Database Administrator, Warehouse Manager, and Customer.
+
+Enter the number associated with a user role to access the functions available to that user.
